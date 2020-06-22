@@ -1,0 +1,4 @@
+i-am-alive:
+  path: /patterns/decorator
+  controller: App\Controller\ExamplesController::decorator
+  methods: [GET]
