@@ -7,6 +7,7 @@ services:
           - ".:/app"
           - "./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf"
           - "./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini"
+        container_name: webserver
         depends_on:
           - php
         ports:
@@ -15,6 +16,7 @@ services:
         build:
             context: .
             dockerfile: docker/Dockerfile
+        container_name: patterns
         volumes:
             - ".:/app"
             - "./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini"
